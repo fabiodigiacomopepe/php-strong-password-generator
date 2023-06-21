@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #001632;
+    color: white;
+}
+
+h1 {
+    color: #7f8a98;
+}
+
+.title {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    color: black;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+input {
+    padding: 3px 5px;
+}
+
+.password {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    font-size: 40px;
+}
+
+a {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}

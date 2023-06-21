@@ -23,15 +23,25 @@ Dare all’utente anche la possibilità di permettere o meno la ripetizione di c
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
         <title>PHP Strong Password Generator</title>
     </head>
     
     <body>
-        <form action="index.php" method="GET">
-            <label for="lenPass">Lunghezza password:</label>
-            <input type="number" name="lenPass" id="lenPass" value="<?php echo $_GET['lenPass']; ?>">
-            <input type="submit" value="INVIA">
-        </form>
-        <?php include "functions.php"; ?>
+        <div class="title">
+            <h1>Strong Password Generator</h1>
+            <h2>Genera una password sicura</h2>
+        </div>
+
+        <div class="container">
+            <form action="index.php" method="GET">
+                <label for="lenPass">Lunghezza password:</label>
+                <input type="number" name="lenPass" id="lenPass" value="<?php echo $_GET['lenPass']; ?>">
+                <input type="submit" value="INVIA">
+            </form>
+            <?php
+                include "functions.php";
+            ?>
+        </div>
     </body>
 </html>

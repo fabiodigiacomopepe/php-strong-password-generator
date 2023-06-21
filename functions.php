@@ -1,13 +1,22 @@
 <?php
-    var_dump($_GET);
-    echo "<br />";
+    $lenPass = $_GET['lenPass'] ?? -1;
+   /*  var_dump($lenPass);
+    echo "<br />"; */
     $randString = array();
 
-    for ($i=0; $i < $_GET['lenPass']; $i++) { 
+    for ($i=0; $i < $lenPass; $i++) { 
         $range = array_merge(range('A', 'Z'),range('a', 'z'),range('0', '9'),range('!', '/'));
         $index = array_rand($range, 1);
         array_push($randString, $range[$index]);
     };
 
-    var_dump(implode($randString));
+    $finalString = implode($randString);
+    echo $finalString;
+
+    session_start();
+    $_SESSION['stringa'] = $finalString;
+
+    if (count($randString) == $lenPass) {
+        header('Location: ./passwordPage.php');
+    }
 ?>
