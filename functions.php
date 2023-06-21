@@ -3,9 +3,9 @@
    /*  var_dump($lenPass);
     echo "<br />"; */
     $randString = array();
+    $range = array_merge(range('A', 'Z'),range('a', 'z'),range('0', '9'),range('!', '/'));
 
     for ($i=0; $i < $lenPass; $i++) { 
-        $range = array_merge(range('A', 'Z'),range('a', 'z'),range('0', '9'),range('!', '/'));
         $index = array_rand($range, 1);
         array_push($randString, $range[$index]);
     };
